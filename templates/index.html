@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Conversor de Base Numérica</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* Cor de fundo neutra */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        
+        h1 {
+            margin-bottom: 20px;
+        }
+        
+        form {
+            background-color: #fff; /* Cor de fundo do formulário */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            max-width: 100%;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+
+    
+</head>
+<body>
+    <h1>Conversões de bases Numéricas</h1>
+    <form action="/converter" method="post">
+        <label for="opcao">Escolha a operação desejada:</label>
+        <select id="opcao" name="opcao">
+            <option value="1">Decimal para Binário</option>
+            <option value="2">Decimal para Hexadecimal</option>
+            <option value="3">Decimal para Octal</option>
+            <option value="4">Binário para Decimal</option>
+            <option value="5">Hexadecimal para Decimal</option>
+            <option value="6">Octal para Decimal</option>
+        </select><br><br>
+        <label for="numero">Número:</label>
+        <input type="text" id="numero" name="numero"><br><br>
+        <input type="submit" value="Converter">
+    </form>
+</body>
+</html>
