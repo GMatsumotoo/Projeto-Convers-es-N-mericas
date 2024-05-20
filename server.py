@@ -1,5 +1,14 @@
 from flask import Flask, render_template, request
 
+@app.route('/')
+def root_response():
+    return "Hello World."
+
+@app.route('/api', methods=['POST', 'GET'])
+def api_response():
+    if request.method == 'POST':
+        return request.json
+
 app = Flask(__name__)
 
 def decimal_para_binario(decimal):
